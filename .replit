@@ -1,0 +1,15 @@
+run = "bin/Godot_v3.4.4-stable_linux_headless.64 -s fizzbuzz.gd"
+entrypoint = "fizzbuzz.gd"
+
+hidden = ["bin", "logs"]
+
+[packager]
+language = "GDScript"
+
+[languages.GDScript]
+# The glob pattern to match files for this programming language
+pattern = "**/*.gd"
+
+    # LSP configuration for code intelligence
+    [languages.GDScript.languageServer]
+    start = ["GDScript-analyzer"]
